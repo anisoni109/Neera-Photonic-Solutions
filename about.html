@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | NeeRa Photonics</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            background: linear-gradient(135deg, var(--dark-color) 0%, var(--secondary-color) 100%);
+        }
+        .page-header h1 {
+            color: #fff;
+            z-index: 2;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-content img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .team-member {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid var(--border-color);
+        }
+
+        .team-member h4 {
+            color: var(--heading-color);
+            margin-bottom: 5px;
+        }
+
+        .team-member p {
+            color: var(--primary-color);
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="index.html" class="logo">NeeRa<span>Photonics</span></a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link active">About Us</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div id="particles-js-about"></div> <!-- Placeholder for a different particle config if needed -->
+            <h1 class="reveal">About NeeRa Photonics</h1>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text reveal">
+                        <h2>Our Mission</h2>
+                        <p>Our mission is to be a leading design house for optical solutions in India and a trusted partner for companies worldwide. We are committed to translating complex scientific challenges into market-ready technological solutions through rigorous design, simulation, and strategic partnership.</p>
+                        <p>We believe in the power of light to solve some of the world's most pressing problems, from high-speed data communication and advanced medical diagnostics to next-generation sensing and quantum computing. Our goal is to make these technologies accessible and commercially viable for our clients.</p>
+                    </div>
+                    <div class="about-image reveal">
+                        <!-- Placeholder for an image. I will add one later. -->
+                        <img src="https://picsum.photos/800/600?grayscale" alt="Optical design illustration">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Us Section -->
+        <section class="section why-us-section" style="background-color: var(--card-bg);">
+            <div class="container">
+                <div class="section-title reveal">
+                    <h2>Why Choose Us?</h2>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card reveal">
+                        <h3>🎓 Proven Expertise</h3>
+                        <p>5+ years designing optical systems for a wide range of applications and industries.</p>
+                    </div>
+                    <div class="service-card reveal">
+                        <h3>⚡ Fast Turnaround</h3>
+                        <p>Our boutique structure means rapid decisions, minimal overhead, and a dedicated focus on your project.</p>
+                    </div>
+                    <div class="service-card reveal">
+                        <h3>🇮🇳 Market Knowledge</h3>
+                        <p>Deep understanding of Indian fabs, supply chains, regulations, and the local optical engineering ecosystem.</p>
+                    </div>
+                     <div class="service-card reveal">
+                        <h3>💡 End-to-End Solutions</h3>
+                        <p>From design and simulation through fabrication partnerships and testing—we provide complete coverage.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Ecosystem Section -->
+        <section class="section ecosystem-section">
+            <div class="container">
+                <div class="section-title reveal">
+                    <h2>A Complete Optical Solution</h2>
+                    <p>We provide a seamless, end-to-end service experience, from initial design and simulation to fabrication and testing, ensuring a smooth journey from concept to product.</p>
+                </div>
+                <div class="ecosystem-grid">
+                    <div class="ecosystem-item reveal">
+                        <div class="ecosystem-icon">🔬</div>
+                        <h4>Design & Simulation</h4>
+                        <p>Circuit-level and system-level design using industry-leading simulation tools.</p>
+                    </div>
+                    <div class="ecosystem-item reveal">
+                        <div class="ecosystem-icon">⚙️</div>
+                        <h4>Prototyping & Fabrication</h4>
+                        <p>Partnerships with world-class foundries to bring your designs to life.</p>
+                    </div>
+                    <div class="ecosystem-item reveal">
+                        <div class="ecosystem-icon">📦</div>
+                        <h4>Packaging & Testing</h4>
+                        <p>Comprehensive testing and robust packaging solutions for real-world applications.</p>
+                    </div>
+                     <div class="ecosystem-item reveal">
+                        <div class="ecosystem-icon">🚀</div>
+                        <h4>System Integration</h4>
+                        <p>Full system assembly and integration to deliver a complete, market-ready solution.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-title reveal">
+                    <h2>Meet Our Team</h2>
+                    <p>We are a team of passionate engineers and scientists dedicated to excellence.</p>
+                </div>
+                <div class="team-grid">
+                    <div class="team-member reveal">
+                        <img src="https://picsum.photos/400/400?grayscale&random=1" alt="Team member placeholder">
+                        <h4>Dr. Ankit Kumar</h4>
+                        <p>Founder & Principal Engineer</p>
+                    </div>
+                    <div class="team-member reveal">
+                        <img src="https://picsum.photos/400/400?grayscale&random=2" alt="Team member placeholder">
+                        <h4>Jane Doe</h4>
+                        <p>Senior Photonics Engineer</p>
+                    </div>
+                    <div class="team-member reveal">
+                        <img src="https://picsum.photos/400/400?grayscale&random=3" alt="Team member placeholder">
+                        <h4>John Smith</h4>
+                        <p>Optomechanical Specialist</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Back to top button -->
+    <a href="#" id="back-to-top">↑</a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>NeeRa<span>Photonics</span></h4>
+                    <p>Your expert partner in optical solutions, from component-level design to full-system integration.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: hello@neeraphot.com</p>
+                    <p>Phone: +91-XXXXXXXXXX</p>
+                    <p>Location: Lucknow, UP, India</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NeeRa Photonics & Sensing Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // A simple particle config for the about page header, to differentiate it
+         if (document.getElementById('particles-js-about')) {
+            particlesJS('particles-js-about', {
+                "particles": {
+                    "number": {"value": 50, "density": {"enable": true, "value_area": 800}},
+                    "color": {"value": "#ffffff"},
+                    "shape": {"type": "edge"},
+                    "opacity": {"value": 0.4, "random": true},
+                    "size": {"value": 4, "random": true},
+                    "line_linked": {"enable": false},
+                    "move": {"enable": true, "speed": 3, "direction": "bottom", "straight": true, "out_mode": "out"}
+                },
+                "interactivity": {"detect_on": "canvas", "events": {"onhover": {"enable": false}},
+            }, "retina_detect": true});
+        }
+    </script>
+
+</body>
+</html>

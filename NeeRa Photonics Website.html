@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeeRa Photonics & Sensing Solutions | Integrated Photonic Design</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            background: #ffffff;
+            border-bottom: 1px solid #e8e8e8;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #0066cc 0%, #00a8e8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #1a1a1a;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #0066cc;
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 60px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8f4ff 50%, #f0f9ff 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 102, 204, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(30px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            color: #0a1428;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            line-height: 1.2;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        /* Image containers */
+        .image-container {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 102, 204, 0.15);
+            margin: 20px auto;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .capabilities-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+            margin: 40px 0;
+        }
+
+        .capabilities-showcase img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 102, 204, 0.12);
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            color: #0a1428;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            line-height: 1.2;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        /* Image containers */
+        .image-container {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 102, 204, 0.15);
+            margin: 20px auto;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .capabilities-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+            margin: 40px 0;
+        }
+
+        .capabilities-showcase img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 102, 204, 0.12);
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: slideUp 0.8s ease-out 0.2s both;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 45px;
+            background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+            animation: slideUp 0.8s ease-out 0.4s both;
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(135deg, #0052a3 0%, #003d7a 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 60px;
+            background: #ffffff;
+        }
+
+        .section-title {
+            font-size: 44px;
+            font-weight: 700;
+            color: #0a1428;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .service-card {
+            padding: 40px;
+            background: linear-gradient(135deg, #f9f9f9 0%, #f0f4f9 100%);
+            border-radius: 12px;
+            border: 1px solid #e8e8e8;
+            border-left: 4px solid transparent;
+            background-image: linear-gradient(135deg, #f9f9f9 0%, #f0f4f9 100%), linear-gradient(135deg, #0066cc, #00a8e8);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 102, 204, 0.05);
+            transition: left 0.3s;
+            z-index: 0;
+        }
+
+        .service-card:hover::before {
+            left: 0;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 102, 204, 0.15);
+        }
+
+        .service-card-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-icon {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #0a1428;
+            margin-bottom: 14px;
+        }
+
+        .service-card p {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Service Ecosystem */
+        .ecosystem {
+            padding: 100px 60px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #f0f9ff 100%);
+        }
+
+        .ecosystem h2 {
+            font-size: 44px;
+            font-weight: 700;
+            color: #0a1428;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .ecosystem-visual {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            align-items: center;
+        }
+
+        .ecosystem-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .ecosystem-item {
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #0066cc;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+        }
+
+        .ecosystem-item:hover {
+            box-shadow: 0 6px 20px rgba(0, 102, 204, 0.15);
+            transform: translateX(8px);
+        }
+
+        .ecosystem-item h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #0066cc;
+            margin-bottom: 8px;
+        }
+
+        .ecosystem-item p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .ecosystem-chart {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .ecosystem-chart img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Why Us Section */
+        .why-us {
+            padding: 100px 60px;
+            background: #ffffff;
+        }
+
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .why-card {
+            padding: 35px;
+            background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+            border-radius: 12px;
+            border: 1px solid #e8e8e8;
+            text-align: center;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .why-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #0066cc, #00a8e8);
+            border-radius: 12px 12px 0 0;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s;
+        }
+
+        .why-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .why-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0, 102, 204, 0.12);
+        }
+
+        .why-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .why-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #0066cc;
+            margin-bottom: 12px;
+        }
+
+        .why-card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Expertise Section */
+        .expertise {
+            padding: 100px 60px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #f0f9ff 100%);
+        }
+
+        .expertise-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .expertise-item {
+            padding: 35px;
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #e8e8e8;
+            transition: all 0.3s;
+        }
+
+        .expertise-item:hover {
+            box-shadow: 0 8px 24px rgba(0, 102, 204, 0.12);
+            transform: translateY(-4px);
+            border-color: #0066cc;
+        }
+
+        .expertise-item h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #0a1428;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .expertise-item::before {
+            content: '▪';
+            color: #0066cc;
+            font-size: 20px;
+        }
+
+        .expertise-item p {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Quotation Request Section */
+        .quotation {
+            padding: 100px 60px;
+            background: white;
+        }
+
+        .quotation h2 {
+            font-size: 44px;
+            font-weight: 700;
+            color: #0a1428;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .quotation-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .quotation-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .quotation-card {
+            padding: 40px;
+            background: linear-gradient(135deg, #f9f9f9 0%, #f0f4f9 100%);
+            border-radius: 12px;
+            border: 1px solid #e8e8e8;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .quotation-card:hover {
+            box-shadow: 0 12px 30px rgba(0, 102, 204, 0.15);
+            transform: translateY(-6px);
+        }
+
+        .quotation-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #0a1428;
+            margin-bottom: 16px;
+        }
+
+        .quotation-card p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 24px;
+            line-height: 1.8;
+        }
+
+        .quotation-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .quotation-btn:hover {
+            background: linear-gradient(135deg, #0052a3 0%, #003d7a 100%);
+            transform: translateY(-2px);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 60px;
+            background: linear-gradient(135deg, #0066cc 0%, #0052a3 50%, #003d7a 100%);
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            right: 5%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-section h2 {
+            font-size: 44px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button-white {
+            display: inline-block;
+            padding: 16px 45px;
+            background: white;
+            color: #0066cc;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button-white:hover {
+            background: #f0f0f0;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Footer */
+        footer {
+            padding: 50px 60px;
+            background: #0a1428;
+            color: white;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #00a8e8;
+        }
+
+        .footer-section p {
+            font-size: 14px;
+            color: #aaa;
+            line-height: 1.8;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: #00a8e8;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                padding: 15px 30px;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-links {
+                gap: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                padding: 60px 30px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .services, .ecosystem, .why-us, .expertise, .quotation, .cta-section {
+                padding: 60px 30px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .services-grid, .why-us-grid, .quotation-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .expertise-list, .ecosystem-visual {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">NeeRa Photonics</div>
+        <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#quotation">Get Quotation</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Integrated Photonic Solutions, Engineered for Your Needs</h1>
+            <p>Circuit-level PIC design on silicon and III-V platforms. System-level optical integration. 5+ years of expertise in active devices, passive components, and end-to-end photonic systems.</p>
+            <button class="cta-button" onclick="document.getElementById('quotation').scrollIntoView({behavior: 'smooth'})">Request a Quotation</button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">End-to-end photonic solutions for startups, research labs, and enterprises</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-card-content">
+                    <div class="service-icon">🔬</div>
+                    <h3>PIC Design & Circuit Simulation</h3>
+                    <p>Circuit and system-level photonic design on silicon and III-V materials. Active device modeling (lasers, modulators, SOAs, APDs, PIN diodes). Passive component optimization. Ansys Lumerical, Zemax, COMSOL-based design and layout for fabrication.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-card-content">
+                    <div class="service-icon">📡</div>
+                    <h3>Optical Sensors Solutions</h3>
+                    <p>Custom photonic and fiber-optic sensor design for diverse sensing applications: temperature, pressure, strain, acceleration, vibration, rotation, LiDAR, quantum sensing, medical imaging.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-card-content">
+                    <div class="service-icon">🎯</div>
+                    <h3>Optical System Design</h3>
+                    <p>End-to-end discrete optics and hybrid system design: transceiver architecture, link budgets, beam steering, optical filtering, coherent systems, RF-photonics, aerospace and defense applications.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-card-content">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Optomechanical Design</h3>
+                    <p>Mechanical integration and optomechanical simulations: alignment tolerances, thermal management, structural analysis, precision mechanics, prototype design and optimization.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-card-content">
+                    <div class="service-icon">🏭</div>
+                    <h3>Fabrication & Testing Outsourcing</h3>
+                    <p>Partnership facilitation for fabrication, testing, and packaging: silicon photonics fabs, specialty wafer services, photonic foundries, packaging and assembly support.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-card-content">
+                    <div class="service-icon">📚</div>
+                    <h3>Training & Workshops</h3>
+                    <p>Customized training in integrated photonics, optical design, simulation tools, and photonic system design for teams and organizations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Ecosystem -->
+    <section class="ecosystem" id="ecosystem">
+        <h2>Complete Integrated Photonics Ecosystem</h2>
+        <div class="ecosystem-visual">
+            <div class="ecosystem-list">
+                <div class="ecosystem-item">
+                    <h4>🔬 Circuit-Level Design</h4>
+                    <p>PIC design for silicon and III-V platforms. Active devices (lasers, modulators, SOAs, APDs). Passive components. Full simulation and layout.</p>
+                </div>
+                <div class="ecosystem-item">
+                    <h4>🎯 System-Level Design</h4>
+                    <p>End-to-end optical system architecture, integration, link budgets, and performance optimization.</p>
+                </div>
+                <div class="ecosystem-item">
+                    <h4>📡 Optical Sensors</h4>
+                    <p>Fiber-optic and photonic sensor design for diverse sensing applications and requirements.</p>
+                </div>
+                <div class="ecosystem-item">
+                    <h4>⚙️ Optomechanical Design</h4>
+                    <p>Mechanical integration, simulations, alignment, and precision engineering support.</p>
+                </div>
+                <div class="ecosystem-item">
+                    <h4>🏭 Fabrication Outsourcing</h4>
+                    <p>Partnership facilitation with fabs, foundries, testing, and packaging services.</p>
+                </div>
+            </div>
+            <div class="ecosystem-chart">
+                <svg viewBox="0 0 300 300" style="width: 100%; max-width: 400px;">
+                    <!-- Center circle -->
+                    <circle cx="150" cy="150" r="50" fill="#0066cc" opacity="0.2"/>
+                    <circle cx="150" cy="150" r="40" fill="#0066cc"/>
+                    <text x="150" y="155" text-anchor="middle" fill="white" font-weight="bold" font-size="12">NeeRa</text>
+                    
+                    <!-- Outer circles -->
+                    <circle cx="80" cy="80" r="35" fill="#00a8e8" opacity="0.3"/>
+                    <text x="80" y="85" text-anchor="middle" fill="#0a1428" font-weight="600" font-size="11">Design</text>
+                    
+                    <circle cx="220" cy="80" r="35" fill="#00a8e8" opacity="0.3"/>
+                    <text x="220" y="85" text-anchor="middle" fill="#0a1428" font-weight="600" font-size="11">Sensors</text>
+                    
+                    <circle cx="80" cy="220" r="35" fill="#00a8e8" opacity="0.3"/>
+                    <text x="80" y="225" text-anchor="middle" fill="#0a1428" font-weight="600" font-size="11">Mechanics</text>
+                    
+                    <circle cx="220" cy="220" r="35" fill="#00a8e8" opacity="0.3"/>
+                    <text x="220" y="225" text-anchor="middle" fill="#0a1428" font-weight="600" font-size="11">Fab</text>
+                    
+                    <circle cx="150" cy="50" r="35" fill="#00a8e8" opacity="0.3"/>
+                    <text x="150" y="55" text-anchor="middle" fill="#0a1428" font-weight="600" font-size="11">Systems</text>
+                    
+                    <!-- Connecting lines -->
+                    <line x1="150" y1="90" x2="105" y2="105" stroke="#0066cc" stroke-width="1.5"/>
+                    <line x1="150" y1="90" x2="195" y2="105" stroke="#0066cc" stroke-width="1.5"/>
+                    <line x1="105" y1="195" x2="150" y2="210" stroke="#0066cc" stroke-width="1.5"/>
+                    <line x1="195" y1="195" x2="150" y2="210" stroke="#0066cc" stroke-width="1.5"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="why-us">
+        <h2 class="section-title">Why Choose NeeRa</h2>
+        <div class="why-us-grid">
+            <div class="why-card">
+                <div class="why-icon">🎓</div>
+                <h3>Proven Expertise</h3>
+                <p>5+ years designing circuit and system-level photonics across silicon, III-V materials, and diverse applications.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">⚡</div>
+                <h3>Fast Turnaround</h3>
+                <p>Boutique structure means rapid decisions, minimal overhead, and dedicated focus on your project.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">🇮🇳</div>
+                <h3>India Market Knowledge</h3>
+                <p>Deep understanding of Indian fabs, supply chains, regulations, and the local photonics ecosystem.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">💡</div>
+                <h3>End-to-End Solutions</h3>
+                <p>From design and simulation through fabrication partnerships and testing—complete coverage.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section class="expertise" id="expertise">
+        <h2 class="section-title">Our Expertise</h2>
+        <p class="section-subtitle">Deep technical knowledge across integrated photonics domains</p>
+        <div class="expertise-list">
+            <div class="expertise-item">
+                <h3>Silicon & III-V Photonics</h3>
+                <p>Circuit and system-level design on silicon, silicon nitride, and III-V platforms. Active devices: lasers, electro-optic modulators, SOAs, APDs, PIN diodes. Passive components: waveguides, couplers, resonators. Co-packaged optics (CPO) for data centers and AI.</p>
+            </div>
+            <div class="expertise-item">
+                <h3>Optical Sensors & Systems</h3>
+                <p>Fiber-optic and photonic sensor design: Fabry-Perot, Bragg grating, Mach-Zehnder, interferometric sensors. Temperature, pressure, strain, acceleration, LiDAR, distributed sensing. Full system architecture and signal processing.</p>
+            </div>
+            <div class="expertise-item">
+                <h3>System Integration</h3>
+                <p>End-to-end optical system design: transceiver architecture, link budgets, optical filtering, beam steering, coherent detection, RF-photonics, defense/aerospace applications, 5G/6G networks.</p>
+            </div>
+            <div class="expertise-item">
+                <h3>Simulation & Circuit Optimization</h3>
+                <p>Ansys Lumerical (FDTD, EME), Zemax OpticStudio, COMSOL. Circuit-level active/passive component modeling. Inverse design, ML optimization, fabrication-aware design (DFM), yield analysis, performance validation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quotation Section -->
+    <section class="quotation" id="quotation">
+        <h2 class="section-title">Get a Custom Quotation</h2>
+        <p class="quotation-subtitle">Every project is unique. Contact us to discuss your specific needs and receive a tailored quotation.</p>
+        <div class="quotation-grid">
+            <div class="quotation-card">
+                <h3>Design Audit</h3>
+                <p>Review and optimize your existing photonic design. Includes analysis, recommendations, and fabrication readiness assessment.</p>
+                <button class="quotation-btn" onclick="alert('Contact us at: hello@neeraphot.com or +91-XXXXXXXXXX')">Request Quotation</button>
+            </div>
+            <div class="quotation-card">
+                <h3>Custom Design Project</h3>
+                <p>Full design engagement: requirements, simulation, optimization, layout, and fabrication preparation for your photonic system.</p>
+                <button class="quotation-btn" onclick="alert('Contact us at: hello@neeraphot.com or +91-XXXXXXXXXX')">Request Quotation</button>
+            </div>
+            <div class="quotation-card">
+                <h3>Ongoing Support</h3>
+                <p>Retainer-based technical support: Q&A, design reviews, troubleshooting, and mentoring for your team.</p>
+                <button class="quotation-btn" onclick="alert('Contact us at: hello@neeraphot.com or +91-XXXXXXXXXX')">Request Quotation</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="cta-content">
+            <h2>Ready to Bring Your Photonic Vision to Life?</h2>
+            <p>Let's discuss how NeeRa can accelerate your photonics project—from concept to market.</p>
+            <button class="cta-button-white" onclick="alert('Email: hello@neeraphot.com\nPhone: +91-XXXXXXXXXX\nOffice: Lucknow, India')">Get in Touch</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>NeeRa Photonics</h4>
+                <p>Circuit and system-level photonic design. Silicon and III-V expertise. Active/passive devices. Optical sensors. Integrated solutions for photonics startups and enterprises.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#services">PIC Design & Simulation</a></li>
+                    <li><a href="#services">Optical Sensors</a></li>
+                    <li><a href="#services">System Design</a></li>
+                    <li><a href="#services">Optomechanical Design</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: hello@neeraphot.com</p>
+                <p>Phone: +91-XXXXXXXXXX</p>
+                <p>Location: Lucknow, Uttar Pradesh, India</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 NeeRa Photonics & Sensing Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({behavior: 'smooth'});
+                }
+            });
+        });
+
+        // Add scroll animation for elements
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .why-card, .expertise-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
